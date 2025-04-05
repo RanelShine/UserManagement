@@ -3,38 +3,39 @@
 {% block title %}User{% endblock %}
 
 {% block body %}
-    <h1 class="mon-titre">USER</h1>
+    <h1 class="mon-titre">User</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>Website</th>
-                <td>{{ user.website }}</td>
-            </tr>
-            <tr>
-                <th>Detail</th>
-                <td>{{ user.detail }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <table class="table table-bordered w-75 mx-auto align-middle">
+    <tbody>
+        <tr>
+            <th class="text-start" style="width: 150px; background-color: skyblue;">Id</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.id }}</td>
+        </tr>
+        <tr>
+            <th class="text-start" style="background-color: skyblue;">Email</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th class="text-start" style="background-color: skyblue;">Roles</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.roles ? user.roles|json_encode : '' }}</td>
+        </tr>
+        <tr>
+            <th class="text-start" style="background-color: skyblue;">Password</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.password }}</td>
+        </tr>
+        <tr>
+            <th class="text-start" style="background-color: skyblue;">Website</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.website }}</td>
+        </tr>
+        <tr>
+            <th class="text-start" style="background-color: skyblue;">Detail</th>
+            <td class="text-start" style="background-color: skyblue;">{{ user.detail }}</td>
+        </tr>
+    </tbody>
+</table>
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
+
+    <a href="{{ path('app_user_index') }}" >back to list</a>
 
     <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
 
