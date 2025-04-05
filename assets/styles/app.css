@@ -1,3 +1,8 @@
 body {
     background-color: skyblue;
 }
+.mon-titre {
+    color: white; /* Tu peux mettre la couleur que tu veux, ex: #3498db, rgb(255,0,0), etc. */
+    
+}
+
