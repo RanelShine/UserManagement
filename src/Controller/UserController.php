@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-#[Route('/user', name:'user_index')]
+#[Route('/user')]
 final class UserController extends AbstractController
 {
     private $passwordEncoder;
